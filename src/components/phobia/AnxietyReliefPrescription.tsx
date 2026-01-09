@@ -7,10 +7,10 @@ import { landingData } from "@/data/landingData";
 
 const triggers = [
     { id: "truck", label: "큰 트럭이나 버스가 옆에 지나갈 때" },
-    { id: "honk", label: "뒤차의 경적 소리가 들릴 때" },
+    { id: "honk", label: "좁은 골목길을 지나갈 때" },
     { id: "merge", label: "끼어들기(차선 변경)를 해야 할 때" },
     { id: "speed", label: "고속도로 등 빠른 속도로 달릴 때" },
-    { id: "night", label: "비 오는 날이나 밤에 운전할 때" },
+    { id: "night", label: "구불구불한 커브길이 연속될 때" },
     { id: "accident", label: "과거 사고 경험이 떠오를 때" }
 ];
 
@@ -147,9 +147,9 @@ const AnxietyReliefPrescription = () => {
                                             <ShieldCheck className="text-gray-600" size={24} />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-lg text-gray-900 mb-1">안전 장치 처방</h4>
+                                            <h4 className="font-bold text-lg text-gray-900 mb-1">안전 시뮬레이터 처방</h4>
                                             <p className="text-gray-600 leading-relaxed">
-                                                보조 브레이크가 장착된 안전한 차량으로, 돌발 상황에서도 강사님이 100% 제어해드립니다. 사고 걱정은 내려놓으세요.
+                                                현장감 넘치는 안전한 시뮬레이터로, 무제한 반복연습이 가능합니다. 사고 걱정은 내려놓으세요.
                                             </p>
                                         </div>
                                     </div>

@@ -499,7 +499,7 @@ export const siteConfig: SiteConfig = {
                     },
                     {
                         title: "친절한 교육",
-                        description: "소리 지르지 않는 강사님과 함께하는 편안한 수업",
+                        description: "소리 지르지 않는 매니저님과 함께하는 편안한 수업",
                         icon: "Smile"
                     },
                     {

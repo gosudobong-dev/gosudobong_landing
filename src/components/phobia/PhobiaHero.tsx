@@ -19,8 +19,8 @@ const PhobiaHero = ({ locationName, keyword }: PhobiaHeroProps) => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/phobia_hero_bg.png"
-                    alt="운전 공포증 극복을 위한 편안한 운전 연수 환경"
+                    src="/hero3.webp"
+                    alt="고수의 운전면허 도봉점 실내 운전연습장 전경"
                     fill
                     className="object-cover opacity-60"
                     priority

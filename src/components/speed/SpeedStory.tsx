@@ -17,7 +17,7 @@ const SpeedStory = () => {
                         "3일 만에 딴다더니... <span className="text-red-600">4주가 걸렸어요</span>"
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        황*정 수강생의 실제 이야기를 통해 <br className="hidden md:block" />
+                        수강생들의 실제 이야기를 통해 <br className="hidden md:block" />
                         학원들의 '단기 완성' 마케팅 이면을 확인해보세요.
                     </p>
                 </div>
@@ -36,13 +36,13 @@ const SpeedStory = () => {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-gray-800">BEFORE: 일반 학원</h3>
-                                <p className="text-sm text-gray-500">황*정 수강생의 뼈아픈 경험</p>
+                                <p className="text-sm text-gray-500">황*정씨의 뼈아픈 경험</p>
                             </div>
                         </div>
 
                         <div className="relative aspect-square mb-8 rounded-2xl overflow-hidden border border-gray-200 bg-white">
                             <Image
-                                src="/hwang_before.png"
+                                src="/hwang_before.webp"
                                 alt="황*정 수강생의 좌절"
                                 fill
                                 className="object-contain p-4"
@@ -51,7 +51,7 @@ const SpeedStory = () => {
 
                         <div className="space-y-4 flex-1">
                             <p className="text-gray-700 leading-relaxed italic">
-                                "3일 완성이라는 말만 믿고 등록했는데, 실제로는 예약 잡기도 힘들고 한 번 떨어지니까 재시험까지 일주일씩 밀리더라고요. 결국 면허 따는 데만 4주가 걸렸고, 추가 교육비로만 20만 원을 더 씁니다."
+                                "3일 완성이라는 말만 믿고 등록했는데, 실제로는 예약 잡기도 힘들고 한 번 떨어지니까 재시험까지 일주일씩 밀리더라고요. 결국 면허 따는 데만 4주가 걸렸고, 추가 교육비로만 20만 원을 더 썼습니다."
                             </p>
                             <div className="pt-4 border-t border-gray-200">
                                 <div className="flex justify-between text-sm mb-2">
@@ -87,7 +87,7 @@ const SpeedStory = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold">AFTER: 고수의 운전면허</h3>
-                                    <p className="text-red-100 text-sm">진짜 2주일 합격의 비결</p>
+                                    <p className="text-red-100 text-sm">김*정 학생의 2주일 합격의 비결</p>
                                 </div>
                             </div>
 
@@ -126,15 +126,14 @@ const SpeedStory = () => {
                             </div>
 
                             <div className="mt-8">
-                                <button
-                                    onClick={() => {
-                                        const element = document.getElementById('offer');
-                                        element?.scrollIntoView({ behavior: 'smooth' });
-                                    }}
+                                <a
+                                    href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&startDate=2026-01-09&theme=place"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full py-4 bg-white text-red-600 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-red-50 transition-colors"
                                 >
                                     나도 2주일 만에 따기 <ArrowRight size={20} />
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </motion.div>

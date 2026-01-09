@@ -15,7 +15,7 @@ const SpeedHero = ({ locationName, keyword }: SpeedHeroProps) => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/speed_hero_bg_v5.png"
+                    src="/speed_hero_bg_v5.webp"
                     alt="3일 완성 운전면허 속성 과정"
                     fill
                     className="object-cover opacity-40"
@@ -66,7 +66,7 @@ const SpeedHero = ({ locationName, keyword }: SpeedHeroProps) => {
                                 className="group relative px-10 py-5 bg-red-600 text-white font-bold text-xl rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(220,38,38,0.5)] hover:shadow-[0_0_50px_rgba(220,38,38,0.7)] transition-all duration-300 hover:scale-105 active:scale-95"
                             >
                                 <span className="relative z-10 flex items-center gap-3">
-                                    2주 완성반 신청하기 <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                                    면허 2주안에 따러가기 <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                                 </span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-red-700 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </a>

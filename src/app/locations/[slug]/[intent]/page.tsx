@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: title,
         description: `${locationName} ${landmark} 근처 ${slugKeyword} 전문. ${desc} 고수의 운전면허에서 시작하세요.`,
         alternates: {
-            canonical: `https://www.gosudriving.com/locations/${slug}/${intent}`,
+            canonical: `https://dobong.gosudriving.com/locations/${slug}/${intent}`,
         },
     };
 }

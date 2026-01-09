@@ -31,7 +31,7 @@ const LocationSection = ({ theme = "#FECE48" }: { theme?: string }) => {
                             className="block relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden border-2 border-gray-800 shadow-2xl group"
                         >
                             <Image
-                                src="/naver_map.png"
+                                src="/naver_map.webp"
                                 alt="고수의 운전면허 도봉점 네이버 지도"
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -10,7 +10,7 @@ const NewYearEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/images/red_horse_bg.png"
+                    src="/images/red_horse_bg.webp"
                     alt="Red Horse Background"
                     className="w-full h-full object-cover opacity-80 mix-blend-overlay"
                 />
@@ -94,10 +94,14 @@ const NewYearEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
                                 <Check size={16} className="text-blue-400 mt-0.5 shrink-0" />
                                 <span>고수 매니저의 1:1 피드백</span>
                             </li>
+                            <li className="flex items-start gap-2 text-gray-300 text-sm">
+                                <Check size={16} className="text-blue-400 mt-0.5 shrink-0" />
+                                <span>카카오톡 메세지로 '체험권'이라고 보내기만 하면 신청완료!</span>
+                            </li>
                         </ul>
 
                         <a
-                            href="https://pcmap.place.naver.com/place/38729351/ticket"
+                            href="https://pf.kakao.com/_hxlxnIs"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full block text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-xl transition-colors"
@@ -158,7 +162,7 @@ const NewYearEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
                         </ul>
 
                         <a
-                            href="https://pcmap.place.naver.com/place/38729351/ticket"
+                            href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&startDate=2026-01-09&theme=place"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full flex items-center justify-center gap-2 text-black font-bold py-4 rounded-xl transition-colors shadow-lg hover:brightness-110"

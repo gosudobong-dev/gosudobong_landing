@@ -23,7 +23,7 @@ const PracticeProblem = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-3xl md:text-5xl font-bold text-white mb-6 font-hakgyoansim leading-tight"
+                        className="text-2xl md:text-5xl font-bold text-white mb-6 font-hakgyoansim leading-tight"
                         dangerouslySetInnerHTML={{ __html: data.title }}
                     />
                     <motion.p

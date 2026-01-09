@@ -24,7 +24,7 @@ const PracticeHero = ({ locationName, keyword }: PracticeHeroProps) => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/practice_hero_bg.png"
+                    src="/practice_hero_bg.webp"
                     alt="정밀 운전 시뮬레이터 연습 화면"
                     fill
                     className="object-cover opacity-70"

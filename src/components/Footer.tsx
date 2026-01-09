@@ -17,7 +17,7 @@ const Footer = ({ theme = "#FECE48" }: { theme?: string }) => {
                     <div className="md:col-span-2">
                         <div className="mb-6 flex justify-center md:justify-start">
                             <Image
-                                src="/logo-white.png"
+                                src="/logo-white.webp"
                                 alt={siteConfig.common.companyName}
                                 width={160}
                                 height={48}

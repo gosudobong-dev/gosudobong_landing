@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${locationName} ${keyword} 추천 | 고수의 운전면허`,
     description: `${locationName} ${landmark} 근처 쾌적한 실내 운전연습장. ${keyword} 고민 해결! 속성 면허부터 장롱면허 탈출까지, 합리적인 비용으로 시작하세요.`,
     alternates: {
-      canonical: `https://www.gosudriving.com/locations/${slug}`,
+      canonical: `https://dobong.gosudriving.com/locations/${slug}`,
     },
   };
 }

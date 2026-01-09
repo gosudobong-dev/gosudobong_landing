@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { locationData, intentData } from '@/data/seoData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://www.gosudriving.com';
+    const baseUrl = 'https://dobong.gosudriving.com';
 
     // 1. Static Routes
     const staticRoutes = [

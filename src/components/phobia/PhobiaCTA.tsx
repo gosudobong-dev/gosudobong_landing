@@ -34,7 +34,7 @@ const PhobiaCTA = () => {
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                         <a
-                            href="https://pf.kakao.com/_hxlxnIs"
+                            href="https://m.place.naver.com/place/38729351/ticket"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-lg font-bold text-brand-black shadow-lg transition-all hover:scale-105 w-full md:w-auto"
@@ -42,15 +42,6 @@ const PhobiaCTA = () => {
                         >
                             <span>{data?.button}</span>
                             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </a>
-
-                        <a
-                            href="https://pcmap.place.naver.com/place/38729351/ticket"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-lg font-bold text-white border border-gray-700 hover:bg-gray-800 transition-all w-full md:w-auto"
-                        >
-                            <span>체험 예약하기</span>
                         </a>
                     </div>
                 </motion.div>

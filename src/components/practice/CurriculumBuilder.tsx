@@ -69,10 +69,10 @@ const CurriculumBuilder = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-hakgyoansim">
-                        나만의 <span style={{ color: theme }}>운전 연수 커리큘럼</span> 만들기
+                        나만의<br></br><span style={{ color: theme }}>운전 연수 커리큘럼</span>
                     </h2>
                     <p className="text-gray-400 text-lg">
-                        내 수준과 목표에 맞춰 최적의 연습 계획을 짜드립니다.
+                        내 수준과 목표에 맞춰<br></br> 최적의 연습 계획을 짜드립니다.
                     </p>
                 </div>
 
@@ -85,7 +85,7 @@ const CurriculumBuilder = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                             >
-                                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                                <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                                     <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 text-sm" style={{ color: theme, border: `1px solid ${theme}` }}>1</span>
                                     현재 운전 실력은 어떠신가요?
                                 </h3>

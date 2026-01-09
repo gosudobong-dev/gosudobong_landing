@@ -70,19 +70,26 @@ const SpeedCTA = () => {
                                 </div>
                             </li>
                         </ul>
-                        <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                            <p className="text-gray-300 text-sm mb-1">이 모든 혜택을</p>
-                            <p className="text-xl text-white">일반 학원 절반 가격으로</p>
+                        <div className="mt-8 pt-6 border-t border-white/10 text-center">
+                            <div className="bg-gradient-to-b from-white/10 to-transparent rounded-2xl p-6 border border-white/10 shadow-lg relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="relative z-10 flex flex-col items-center justify-center">
+                                    <p className="text-lg text-white/90 mb-1">이 모~든 혜택을</p>
+                                    <p className="text-3xl md:text-4xl font-black text-white tracking-tight">
+                                        일반 학원<br></br> <span className="text-yellow-400 inline-block transform group-hover:scale-105 transition-transform duration-300">절반 가격</span>으로
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <a
-                        href="https://pf.kakao.com/_xmxnmnG/chat"
+                        href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&startDate=2026-01-09&theme=place"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 hover:bg-gray-900 transition-all duration-300 shadow-2xl"
                     >
-                        <span>무제한 요금제로 순식간에 취득하러가기</span>
+                        <span>순식간에 취득하러가기</span>
                         <ArrowRight />
                     </a>
                 </motion.div>

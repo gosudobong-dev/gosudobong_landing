@@ -38,7 +38,7 @@ const Header = () => {
                     {/* ... Logo ... */}
                     <div className="flex items-center">
                         <Image
-                            src="/logo-white.png"
+                            src="/logo-white.webp"
                             alt={siteConfig.common.companyName}
                             width={160}
                             height={48}

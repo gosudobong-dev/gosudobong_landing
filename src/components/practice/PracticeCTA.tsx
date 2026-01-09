@@ -49,10 +49,10 @@ const PracticeCTA = () => {
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                         <a
-                            href="https://pf.kakao.com/_hxlxnIs"
+                            href="https://pcmap.place.naver.com/place/38729351/ticket"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-lg font-bold text-white shadow-lg transition-all hover:scale-105 w-full md:w-auto overflow-hidden relative"
+                            className="group inline-flex items-center justify-center gap-3 px-9 py-5 rounded-full text-lg font-bold text-white shadow-lg transition-all hover:scale-105 w-full md:w-auto overflow-hidden relative"
                             style={{ backgroundColor: theme }}
                         >
                             <span className="relative z-10">{data?.ctaText}</span>
@@ -60,15 +60,6 @@ const PracticeCTA = () => {
 
                             {/* Shine Effect */}
                             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-                        </a>
-
-                        <a
-                            href="https://pcmap.place.naver.com/place/38729351/ticket"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-lg font-bold text-white border border-gray-600 hover:bg-gray-700 transition-all w-full md:w-auto"
-                        >
-                            <span>상담 예약하기</span>
                         </a>
                     </div>
                 </motion.div>

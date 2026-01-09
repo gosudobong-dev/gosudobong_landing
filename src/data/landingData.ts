@@ -430,7 +430,7 @@ export const landingData: Record<string, LandingContent> = {
                 },
                 {
                     title: "친절한 교육",
-                    description: "소리 지르지 않는 강사님과 함께하는 편안한 수업",
+                    description: "소리 지르지 않는 매니저님과 함께하는 편안한 수업",
                     icon: "Smile"
                 },
                 {
@@ -506,7 +506,7 @@ export const landingData: Record<string, LandingContent> = {
                 },
                 {
                     title: "압도적 가성비",
-                    description: "도로 연수 대비 1/3 가격으로\n원하는 만큼 충분히 연습하세요.",
+                    description: "도로 연수 대비 1/2 가격으로\n원하는 만큼 충분히 연습하세요.",
                     icon: "award",
                     highlight: false
                 }
@@ -541,7 +541,7 @@ export const landingData: Record<string, LandingContent> = {
                 "시간 낭비 없는 효율적 교육",
                 "부족한 부분만 쏙쏙 골라 마스터"
             ],
-            ctaText: "12시간 마스터반 상담하기",
+            ctaText: "12시간반 무료체험&상담",
             ctaLink: "https://pcmap.place.naver.com/place/38729351/ticket"
         }
     }
