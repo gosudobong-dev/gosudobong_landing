@@ -17,8 +17,13 @@ import LocationSection from "@/components/LocationSection";
 import FAQ from "@/components/FAQ";
 import FloatingCTA from "@/components/FloatingCTA";
 
+// ISR Strategy: Allow on-demand rendering for pages not pre-built
+export const dynamicParams = true;
+
 export function generateStaticParams() {
-  return locationData.map((location) => ({
+  // Limit to 1000 pages at build time to prevent timeout
+  // Remaining pages will be generated on-demand via ISR
+  return locationData.slice(0, 1000).map((location) => ({
     slug: location.slug,
   }));
 }

@@ -15,10 +15,15 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
+// ISR Strategy: Allow on-demand rendering for pages not pre-built
+export const dynamicParams = true;
+
 export function generateStaticParams() {
     const params: { slug: string; intent: string }[] = [];
 
-    locationData.forEach((location) => {
+    // Limit to first 1000 locations to prevent build timeout
+    // Remaining pages will be generated on-demand via ISR
+    locationData.slice(0, 1000).forEach((location) => {
         intentData.forEach((intent) => {
             // Intent에 맞는 키워드인 경우에만 페이지 생성
             const validKeywords = intentKeywordMap[intent] || [];
