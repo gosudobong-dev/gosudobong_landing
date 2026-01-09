@@ -1,21 +1,18 @@
 import React from "react";
-import { landingData } from "@/data/landingData";
+import { siteConfig } from "@/data/siteConfig";
 
 // Components
 import Header from "@/components/Header";
-
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import CostCalculator from "@/components/CostCalculator";
 import USP from "@/components/USP";
-import Curriculum from "@/components/Curriculum";
-import Offer from "@/components/Offer";
+import ProgramTeaser from "@/components/ProgramTeaser";
 
 // Shared Components
 import SocialProof from "@/components/SocialProof";
 import LocationSection from "@/components/LocationSection";
 import NewYearEvent from "@/components/NewYearEvent";
 import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata = {
@@ -24,36 +21,39 @@ export const metadata = {
 };
 
 export default function Home() {
-  const data = landingData.cost;
-  const theme = data.theme || "#FECE48";
+  // Use Cost Data for the main Hero (Broad Appeal)
+  const heroData = siteConfig.landing.cost.hero;
+  const heroTheme = siteConfig.landing.cost.theme || "#FECE48";
+  const designStyle = siteConfig.landing.cost.designStyle;
+
+  // Use Cost Problem Data for USP
+  const uspData = siteConfig.landing.cost.problem;
 
   return (
     <main className="min-h-screen bg-brand-black font-sans text-white selection:bg-brand-yellow selection:text-brand-black overflow-x-hidden relative">
       <div className="relative z-10">
         <Header />
 
-
-        <Hero data={data.hero} theme={theme} />
-        <CostCalculator />
-        <USP data={data.problem} theme={theme} />
-
-        <Curriculum
-          title={data.curriculum.title}
-          steps={data.curriculum.steps}
-          theme={theme}
+        {/* 1. Main Hub Hero (Broad Appeal) */}
+        <Hero
+          data={heroData}
+          theme={heroTheme}
+          designStyle={designStyle}
         />
-        <Offer
-          offer={data.offer}
-          theme={theme}
-        />
+
+        {/* 2. USP Section (Video Grid) */}
+        <USP data={uspData} theme={heroTheme} />
+
+        {/* 3. Program Teaser (Course Selection) - Hub Feature */}
+        <ProgramTeaser slug="dobong" />
 
         {/* Shared Sections */}
-        <SocialProof theme={theme} />
-        <LocationSection theme={theme} />
-        <NewYearEvent theme={theme} />
-        <FAQ theme={theme} />
-        <Footer theme={theme} />
-        <FloatingCTA theme={theme} />
+        <SocialProof theme={heroTheme} />
+        <LocationSection theme={heroTheme} />
+        <NewYearEvent theme={heroTheme} />
+        <FAQ theme={heroTheme} />
+        <Footer theme={heroTheme} />
+        <FloatingCTA theme={heroTheme} />
       </div>
     </main>
   );
