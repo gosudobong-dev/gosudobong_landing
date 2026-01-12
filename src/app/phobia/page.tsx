@@ -1,5 +1,7 @@
 import React from "react";
 import { landingData } from "@/data/landingData";
+import { siteConfig } from "@/data/siteConfig";
+import { JSONLDScript, generateFAQSchema } from "@/lib/structuredData";
 
 // Components
 import Header from "@/components/Header";
@@ -21,6 +23,20 @@ import FloatingCTA from "@/components/FloatingCTA";
 export const metadata = {
     title: "고수의 운전면허 - 장롱면허 탈출 Phobia 케어",
     description: "운전이 무서우신가요? 심리적 안정을 돕는 단계별 연수 프로그램으로 운전 공포증을 극복하세요.",
+    alternates: {
+        canonical: "https://dobong.gosudriving.com/phobia",
+    },
+    openGraph: {
+        url: "https://dobong.gosudriving.com/phobia",
+        images: [
+            {
+                url: "https://dobong.gosudriving.com/logo-black.webp",
+                width: 800,
+                height: 600,
+                alt: "고수의 운전면허 Phobia 케어",
+            },
+        ],
+    },
 };
 
 export default function PhobiaPage() {
@@ -28,6 +44,7 @@ export default function PhobiaPage() {
 
     return (
         <main className="min-h-screen bg-brand-black font-sans text-white selection:bg-brand-yellow selection:text-brand-black overflow-x-hidden relative">
+            <JSONLDScript schema={generateFAQSchema(siteConfig.faq.items)} />
             <div className="relative z-10">
                 <Header />
 

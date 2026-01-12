@@ -1,5 +1,6 @@
 import React from "react";
 import { siteConfig } from "@/data/siteConfig";
+import { JSONLDScript, generateFAQSchema } from "@/lib/structuredData";
 
 // Components
 import Header from "@/components/Header";
@@ -31,6 +32,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-brand-black font-sans text-white selection:bg-brand-yellow selection:text-brand-black overflow-x-hidden relative">
+      <JSONLDScript schema={generateFAQSchema(siteConfig.faq.items)} />
       <div className="relative z-10">
         <Header />
 

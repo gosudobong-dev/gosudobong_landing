@@ -1,5 +1,7 @@
 import React from "react";
 import { landingData } from "@/data/landingData";
+import { siteConfig } from "@/data/siteConfig";
+import { JSONLDScript, generateFAQSchema } from "@/lib/structuredData";
 
 // Components
 import Header from "@/components/Header";
@@ -21,6 +23,20 @@ import FloatingCTA from "@/components/FloatingCTA";
 export const metadata = {
     title: "고수의 운전면허 - Practice 핀셋 연습",
     description: "부족한 부분만 집중적으로 연습하고 싶으신가요? 내가 원하는 코스만 골라 연습하는 맞춤형 커리큘럼.",
+    alternates: {
+        canonical: "https://dobong.gosudriving.com/practice",
+    },
+    openGraph: {
+        url: "https://dobong.gosudriving.com/practice",
+        images: [
+            {
+                url: "https://dobong.gosudriving.com/logo-black.webp",
+                width: 800,
+                height: 600,
+                alt: "고수의 운전면허 Practice 코스",
+            },
+        ],
+    },
 };
 
 export default function PracticePage() {
@@ -28,6 +44,7 @@ export default function PracticePage() {
 
     return (
         <main className="min-h-screen bg-brand-black font-sans text-white selection:bg-brand-yellow selection:text-brand-black overflow-x-hidden relative">
+            <JSONLDScript schema={generateFAQSchema(siteConfig.faq.items)} />
             <div className="relative z-10">
                 <Header />
 

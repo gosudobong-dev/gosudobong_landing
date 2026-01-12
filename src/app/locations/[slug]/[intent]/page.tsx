@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/data/siteConfig";
 import { locationData, intentData, intentKeywordMap } from "@/data/seoData";
 import { getIntentComponents, isValidIntent, IntentType } from "@/config/intentConfig";
+import { JSONLDScript, generateFAQSchema, generateLocalBusinessSchema } from "@/lib/structuredData";
 
 // Shared Components
 import Header from "@/components/Header";
@@ -21,9 +22,9 @@ export const dynamicParams = true;
 export function generateStaticParams() {
     const params: { slug: string; intent: string }[] = [];
 
-    // Limit to first 1000 locations to prevent build timeout
+    // Limit to first 500 locations to prevent build timeout
     // Remaining pages will be generated on-demand via ISR
-    locationData.slice(0, 1000).forEach((location) => {
+    locationData.slice(0, 500).forEach((location) => {
         intentData.forEach((intent) => {
             // Intent에 맞는 키워드인 경우에만 페이지 생성
             const validKeywords = intentKeywordMap[intent] || [];
@@ -75,6 +76,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         alternates: {
             canonical: `https://dobong.gosudriving.com/locations/${slug}/${intent}`,
         },
+        openGraph: {
+            url: `https://dobong.gosudriving.com/locations/${slug}/${intent}`,
+            images: [
+                {
+                    url: "https://dobong.gosudriving.com/logo-black.webp",
+                    width: 800,
+                    height: 600,
+                    alt: `${locationName} 운전면허`,
+                },
+            ],
+        },
     };
 }
 
@@ -110,6 +122,8 @@ export default async function Page({ params }: Props) {
 
     return (
         <main className="min-h-screen bg-brand-black font-sans text-white selection:bg-brand-yellow selection:text-brand-black overflow-x-hidden relative">
+            <JSONLDScript schema={generateFAQSchema(siteConfig.faq.items)} />
+            <JSONLDScript schema={generateLocalBusinessSchema(locationName)} />
             <div className="relative z-10">
                 <Header />
 

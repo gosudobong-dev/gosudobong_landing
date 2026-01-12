@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 import { siteConfig } from "@/data/siteConfig";
 import { locationData } from "@/data/seoData";
+import { JSONLDScript, generateFAQSchema, generateLocalBusinessSchema } from "@/lib/structuredData";
 
 // Components
 import Header from "@/components/Header";
@@ -48,6 +49,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `https://dobong.gosudriving.com/locations/${slug}`,
     },
+    openGraph: {
+      url: `https://dobong.gosudriving.com/locations/${slug}`,
+      images: [
+        {
+          url: "https://dobong.gosudriving.com/logo-black.webp",
+          width: 800,
+          height: 600,
+          alt: `${locationName} 운전면허`,
+        },
+      ],
+    },
   };
 }
 
@@ -66,8 +78,13 @@ export default async function Page({ params }: Props) {
   // Use Cost Problem Data for USP (or a dedicated USP data if available)
   const uspData = siteConfig.landing.cost.problem;
 
+  // If location not found, show default content without redirecting
+  const showDefaultContent = !locationInfo;
+
   return (
     <main className="min-h-screen bg-brand-black font-sans text-white selection:bg-brand-yellow selection:text-brand-black overflow-x-hidden relative">
+      {!showDefaultContent && <JSONLDScript schema={generateFAQSchema(siteConfig.faq.items)} />}
+      {!showDefaultContent && locationName && <JSONLDScript schema={generateLocalBusinessSchema(locationName)} />}
       <div className="relative z-10">
         <Header />
 
@@ -76,8 +93,8 @@ export default async function Page({ params }: Props) {
         <Hero
           data={heroData}
           theme={heroTheme}
-          locationName={locationName}
-          keyword={keyword}
+          locationName={showDefaultContent ? undefined : locationName}
+          keyword={showDefaultContent ? undefined : keyword}
           designStyle={designStyle}
         />
 
@@ -90,7 +107,7 @@ export default async function Page({ params }: Props) {
         {/* Shared Sections */}
         <SocialProof theme={heroTheme} />
         <LocationSection theme={heroTheme} />
-        <FAQ theme={heroTheme} />
+        {!showDefaultContent && <FAQ theme={heroTheme} />}
         <Footer theme={heroTheme} />
         <FloatingCTA theme={heroTheme} />
       </div>

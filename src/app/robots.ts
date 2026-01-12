@@ -5,8 +5,9 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: '/private/',
+            disallow: ['/api/', '/private/'],
         },
         sitemap: 'https://dobong.gosudriving.com/sitemap.xml',
     };
 }
+
