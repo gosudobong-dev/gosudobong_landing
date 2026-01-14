@@ -185,7 +185,7 @@ const CurriculumBuilder = () => {
                                 <div className="mb-2 text-sm font-bold tracking-wider uppercase" style={{ color: theme }}>Recommendation</div>
                                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-hakgyoansim">
                                     고객님께 딱 맞는 <br />
-                                    <span style={{ color: theme }}>'{result.planName}'</span>을 추천해요!
+                                    <span style={{ color: theme }}>{`'${result.planName}'`}</span>을 추천해요!
                                 </h2>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-left">

@@ -204,7 +204,7 @@ export const landingData: Record<string, LandingContent> = {
                 {
                     step: "Step 4",
                     title: "시험 코스 시뮬레이션",
-                    description: "면허시험장 A, B, C, D 코스 완벽 분석.\n네비게이션 음성과 코스를 통째로 암기"
+                    description: "운전면허시험장 A, B, C, D 코스 완벽 분석.\n네비게이션 음성과 코스를 통째로 암기"
                 }
             ]
         },
@@ -363,8 +363,8 @@ export const landingData: Record<string, LandingContent> = {
         designStyle: 'premium',
         hero: {
             badge: "",
-            title: `<span class="block text-xl md:text-3xl font-bold text-white/90 mb-6 font-sans tracking-tight">노원·도봉 1위 시뮬레이션 면허</span><span class="block text-4xl md:text-7xl font-black text-brand-yellow leading-tight font-sans tracking-tighter drop-shadow-lg">반값이면 충분합니다.</span>`,
-            subtitle: "100만원짜리 면허, 반값으로 끝내세요.<br/>불합격해도 추가비용 0원.",
+            title: `<span class="block text-xl md:text-3xl font-bold text-white/90 mb-6 font-sans tracking-tight">노원·도봉 1위 시뮬레이션 운전면허</span><span class="block text-4xl md:text-7xl font-black text-brand-yellow leading-tight font-sans tracking-tighter drop-shadow-lg">반값이면 충분합니다.</span>`,
+            subtitle: "100만원짜리 운전면허, 반값으로 끝내세요.<br/>불합격해도 추가비용 0원.",
             ctaText: "추가비용 없이 시작하기"
         },
         problem: {
@@ -393,7 +393,7 @@ export const landingData: Record<string, LandingContent> = {
                 {
                     step: "Step 4",
                     title: "시험 코스 완벽 대비",
-                    description: "면허시험장 A~D 코스 시뮬레이션.\n코스 암기 및 모의고사 진행"
+                    description: "운전면허시험장 A~D 코스 시뮬레이션.\n코스 암기 및 모의고사 진행"
                 }
             ]
         },

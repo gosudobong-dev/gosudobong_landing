@@ -118,7 +118,27 @@ export default async function Page({ params }: Props) {
 
     // Get components from registry (OCP-compliant)
     const components = getIntentComponents(intent);
-    const { Hero, InteractiveSection, Problem, Story, Curriculum, CTA, isDataDriven } = components;
+
+    const intentContent = components.isDataDriven ? (
+        // Data-driven pattern (cost page)
+        <>
+            <components.Hero data={data.hero} theme={theme} locationName={locationName} keyword={slugKeyword} designStyle={data.designStyle} />
+            <components.InteractiveSection />
+            <components.Problem data={data.problem} theme={theme} />
+            <components.Curriculum title={data.curriculum.title} steps={data.curriculum.steps} theme={theme} />
+            <components.CTA offer={data.offer} theme={theme} />
+        </>
+    ) : (
+        // Self-contained pattern (speed, phobia, skill, practice)
+        <>
+            <components.Hero locationName={locationName} keyword={slugKeyword} />
+            <components.InteractiveSection />
+            <components.Problem />
+            {components.Story && <components.Story />}
+            <components.Curriculum />
+            <components.CTA />
+        </>
+    );
 
     return (
         <main className="min-h-screen bg-brand-black font-sans text-white selection:bg-brand-yellow selection:text-brand-black overflow-x-hidden relative">
@@ -129,26 +149,7 @@ export default async function Page({ params }: Props) {
 
 
                 {/* Intent-specific content rendered via registry */}
-                {isDataDriven ? (
-                    // Data-driven pattern (cost page)
-                    <>
-                        <Hero data={data.hero} theme={theme} locationName={locationName} keyword={slugKeyword} designStyle={data.designStyle} />
-                        <InteractiveSection />
-                        <Problem data={data.problem} theme={theme} />
-                        <Curriculum title={data.curriculum.title} steps={data.curriculum.steps} theme={theme} />
-                        <CTA offer={data.offer} theme={theme} />
-                    </>
-                ) : (
-                    // Self-contained pattern (speed, phobia, skill, practice)
-                    <>
-                        <Hero locationName={locationName} keyword={slugKeyword} />
-                        <InteractiveSection />
-                        <Problem />
-                        {Story && <Story />}
-                        <Curriculum />
-                        <CTA />
-                    </>
-                )}
+                {intentContent}
 
                 {/* Shared Sections */}
                 <SocialProof theme={theme} />

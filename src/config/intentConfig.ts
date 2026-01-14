@@ -13,6 +13,8 @@
  */
 
 import React from "react";
+import type { CurriculumStep, LandingContent, OfferContent } from "@/data/landingData";
+
 
 // Speed Components
 import SpeedHero from "@/components/speed/SpeedHero";
@@ -61,42 +63,55 @@ import Offer from "@/components/Offer";
 export const INTENT_TYPES = ["speed", "phobia", "skill", "practice", "cost"] as const;
 export type IntentType = (typeof INTENT_TYPES)[number];
 
-/**
- * Props passed to Hero components.
- */
-export interface HeroProps {
+type NoProps = Record<string, never>;
+
+type LocationProps = {
     locationName?: string;
     keyword?: string;
-    data?: unknown;
-    theme?: string;
-}
+};
 
-/**
- * Props for data-driven components.
- */
-export interface DataDrivenProps {
-    data?: unknown;
-    theme?: string;
-}
+type CostHeroProps = {
+    data: LandingContent["hero"];
+    theme: string;
+    locationName?: string;
+    keyword?: string;
+    designStyle?: "aggressive" | "trust" | "premium";
+};
 
-/**
- * Component set for a single intent.
- * Each intent must provide these components.
- * 
- * Note: We use `React.ComponentType<any>` for components that accept
- * varying props (data-driven vs self-contained). The actual type safety
- * is enforced at the usage site in page.tsx.
- */
-export interface IntentComponentSet {
-    Hero: React.ComponentType<any>;
-    InteractiveSection: React.ComponentType<any>;
-    Problem: React.ComponentType<any>;
-    Story?: React.ComponentType<any>;
-    Curriculum: React.ComponentType<any>;
-    CTA: React.ComponentType<any>;
-    /** If true, use data-driven rendering (cost page pattern) */
-    isDataDriven?: boolean;
-}
+type CostProblemProps = {
+    data: LandingContent["problem"];
+    theme: string;
+};
+
+type CostCurriculumProps = {
+    title: string;
+    steps: CurriculumStep[];
+    theme: string;
+};
+
+type CostCTAProps = {
+    offer: OfferContent;
+    theme: string;
+};
+
+export type IntentComponentSet =
+    | {
+        isDataDriven?: false;
+        Hero: React.ComponentType<LocationProps>;
+        InteractiveSection: React.ComponentType<NoProps>;
+        Problem: React.ComponentType<NoProps>;
+        Story?: React.ComponentType<NoProps>;
+        Curriculum: React.ComponentType<NoProps>;
+        CTA: React.ComponentType<NoProps>;
+    }
+    | {
+        isDataDriven: true;
+        Hero: React.ComponentType<CostHeroProps>;
+        InteractiveSection: React.ComponentType<NoProps>;
+        Problem: React.ComponentType<CostProblemProps>;
+        Curriculum: React.ComponentType<CostCurriculumProps>;
+        CTA: React.ComponentType<CostCTAProps>;
+    };
 
 // ============================================
 // Intent Registry

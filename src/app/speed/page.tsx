@@ -23,7 +23,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata = {
     title: "고수의 운전면허 - 3일 완성 Speed 코스",
-    description: "면허 취득이 급하신가요? 3일 만에 완성하는 초단기 속성 합격 커리큘럼.",
+    description: "운전면허 취득이 급하신가요? 3일 만에 완성하는 초단기 속성 합격 커리큘럼.",
     alternates: {
         canonical: "https://dobong.gosudriving.com/speed",
     },

@@ -57,10 +57,10 @@ const LicenseDDayCalculator = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-hakgyoansim">
-                        <span style={{ color: theme }}>면허 취득 D-Day</span> 계산기
+                        <span style={{ color: theme }}>운전면허 취득 D-Day</span> 계산기
                     </h2>
                     <p className="text-gray-400 text-lg">
-                        지금 시작하면 언제 면허증을 받을 수 있을까요?
+                        지금 시작하면 언제 운전면허증을 받을 수 있을까요?
                     </p>
                 </div>
 
@@ -198,7 +198,7 @@ const LicenseDDayCalculator = () => {
                                     style={{ borderColor: `${theme}4d` }}
                                 >
                                     <p className="text-lg md:text-xl text-white">
-                                        남들보다 <span className="font-bold text-2xl md:text-3xl mx-1" style={{ color: theme }}>{savedDays}일</span> 더 빨리 면허를 딸 수 있어요!
+                                        남들보다 <span className="font-bold text-2xl md:text-3xl mx-1" style={{ color: theme }}>{savedDays}일</span> 더 빨리 운전면허를 딸 수 있어요!
                                     </p>
                                 </div>
 

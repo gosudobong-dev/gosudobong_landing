@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { ArrowRight, FileText } from "lucide-react";
 import { landingData } from "@/data/landingData";
 

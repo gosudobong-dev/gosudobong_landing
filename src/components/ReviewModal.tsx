@@ -5,8 +5,16 @@ import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import Image from "next/image";
 
+interface Review {
+    id: number;
+    image: string;
+    text: string;
+    name: string;
+    date?: string;
+}
+
 interface ReviewModalProps {
-    review: any;
+    review: Review;
     onClose: () => void;
     theme?: string;
 }

@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { landingData } from "@/data/landingData";
-import { Check } from "lucide-react";
 
 const PracticeCurriculum = () => {
     const data = landingData.practice.curriculum;

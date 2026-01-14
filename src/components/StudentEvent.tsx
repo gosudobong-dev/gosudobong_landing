@@ -64,7 +64,7 @@ const StudentEvent = () => {
                             수험표만 있으면 <br className="md:hidden" /><span className="text-brand-yellow">최대 20% 할인</span>
                         </h2>
                         <p className="text-gray-300 text-lg md:text-xl break-keep">
-                            대학 입학 전, 가장 저렴하게 면허를 취득할 수 있는 마지막 기회입니다.
+                            대학 입학 전, 가장 저렴하게 운전면허를 취득할 수 있는 마지막 기회입니다.
                         </p>
                     </div>
 

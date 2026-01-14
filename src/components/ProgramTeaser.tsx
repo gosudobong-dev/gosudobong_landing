@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock, ShieldCheck, Award, GraduationCap, Target } from "lucide-react";
 
@@ -14,7 +15,7 @@ const ProgramTeaser = ({ slug }: ProgramTeaserProps) => {
     const programs = [
         {
             id: "speed",
-            title: "속성 1주 완성반",
+            title: "빠른 취득이 필요하신 분",
             description: "시간이 금인 분들을 위한\n초단기 면허 취득 코스",
             icon: Clock,
             color: "text-red-500",
@@ -104,10 +105,12 @@ const ProgramTeaser = ({ slug }: ProgramTeaserProps) => {
                                 >
                                     {/* Background Image */}
                                     <div className="absolute inset-0 z-0">
-                                        <img
+                                        <Image
                                             src={program.image}
                                             alt={program.title}
-                                            className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105 transform"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-105 transform"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent" />
                                     </div>

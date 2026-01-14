@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Star, ShieldCheck } from "lucide-react";
 
@@ -9,10 +10,13 @@ const NewYearEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
         <section id="event" className="py-16 md:py-24 bg-gradient-to-b from-brand-black to-gray-900 border-y border-gray-800 relative overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src="/images/red_horse_bg.webp"
                     alt="Red Horse Background"
-                    className="w-full h-full object-cover opacity-80 mix-blend-overlay"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover opacity-80 mix-blend-overlay"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-black/90 via-brand-black/80 to-brand-black/90"></div>
             </div>
@@ -35,7 +39,7 @@ const NewYearEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
                             className="inline-block text-black font-bold px-4 py-1.5 rounded-full mb-6 text-sm md:text-base shadow-lg"
                             style={{ backgroundColor: theme, boxShadow: `0 10px 15px -3px ${theme}33` }}
                         >
-                            2025년 새해 맞이 특별 이벤트
+                            새해 맞이 특별 이벤트
                         </span>
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 break-keep font-hakgyoansim leading-tight">
                             새해에는 나도 <span style={{ color: theme }}>뚜벅이 탈출!</span><br />
@@ -96,7 +100,7 @@ const NewYearEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
                             </li>
                             <li className="flex items-start gap-2 text-gray-300 text-sm">
                                 <Check size={16} className="text-blue-400 mt-0.5 shrink-0" />
-                                <span>카카오톡 메세지로 '체험권'이라고 보내기만 하면 신청완료!</span>
+                                <span>카카오톡 메세지로 &apos;체험권&apos;이라고 보내기만 하면 신청완료!</span>
                             </li>
                         </ul>
 
@@ -162,7 +166,7 @@ const NewYearEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
                         </ul>
 
                         <a
-                            href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&startDate=2026-01-09&theme=place"
+                            href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&theme=place"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full flex items-center justify-center gap-2 text-black font-bold py-4 rounded-xl transition-colors shadow-lg hover:brightness-110"

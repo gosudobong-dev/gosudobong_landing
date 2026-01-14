@@ -74,7 +74,7 @@ export function generateLocalBusinessSchema(locationName?: string): LocalBusines
         "@context": "https://schema.org",
         "@type": "DrivingSchool",
         name: locationName ? `고수의 운전면허 ${locationName}` : "고수의 운전면허 도봉점",
-        description: "노원/도봉 운전면허 합격률 1위! 실내 운전연습장에서 합리적인 비용으로 면허 취득하세요. 합격할 때까지 추가 비용 없는 무제한 보장반 운영.",
+        description: "노원/도봉 운전면허 합격률 1위! 실내 운전연습장에서 합리적인 비용으로 운전면허 취득하세요. 합격할 때까지 추가 비용 없는 무제한 보장반 운영.",
         url: "https://dobong.gosudriving.com",
         telephone: "02-930-9394",
         address: {

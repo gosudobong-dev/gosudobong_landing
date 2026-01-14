@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Brain, Zap, Eye, RefreshCw, CheckCircle2, AlertTriangle, Car } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, Brain, Zap, Eye, RefreshCw, AlertTriangle } from "lucide-react";
 import { landingData } from "@/data/landingData";
 
 const DriverDNATest = () => {
@@ -21,8 +21,6 @@ const DriverDNATest = () => {
     // Spatial Test State
     const [spatialAnswer, setSpatialAnswer] = useState<string | null>(null);
 
-    // Judgment Test State
-    const [judgmentAnswer, setJudgmentAnswer] = useState<string | null>(null);
 
     // --- REACTION TEST LOGIC ---
     const startReactionTest = () => {
@@ -65,7 +63,6 @@ const DriverDNATest = () => {
 
     // --- JUDGMENT TEST LOGIC ---
     const handleJudgmentAnswer = (answer: string) => {
-        setJudgmentAnswer(answer);
         // Scenario: Yellow light dilemma. Safe stop is best.
         // Options: 'go', 'stop_safe', 'stop_immediate'
         const score = answer === 'stop_safe' ? 100 : answer === 'go' ? 50 : 0; // Stop immediate might be dangerous if rear car exists, but for beginner logic 'stop' is better than 'go'

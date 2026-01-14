@@ -179,7 +179,7 @@ export const siteConfig: SiteConfig = {
         phoneNumber: "02-930-9394",
         address: "서울 노원구 동일로1426 미도빌딩 5층 504호",
         businessNumber: "415-16-63829",
-        copyright: "© 2024 고수의 운전면허 도봉점. All rights reserved.",
+        copyright: `© ${new Date().getFullYear()} 고수의 운전면허 도봉점. All rights reserved.`,
     },
     header: {
         nav: {

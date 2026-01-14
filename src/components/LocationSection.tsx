@@ -25,7 +25,7 @@ const LocationSection = ({ theme = "#FECE48" }: { theme?: string }) => {
                         transition={{ duration: 0.8 }}
                     >
                         <a
-                            href="https://map.naver.com/p/entry/place/38729351?placePath=/home?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202511241635&locale=ko&svcName=map_pcv5&searchType=place&lng=127.0605764&lat=37.6559517&c=15.00,0,0,0,dh"
+                            href="https://map.naver.com/p/entry/place/38729351"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden border-2 border-gray-800 shadow-2xl group"
@@ -42,7 +42,7 @@ const LocationSection = ({ theme = "#FECE48" }: { theme?: string }) => {
                         </a>
 
                         <a
-                            href="https://map.naver.com/p/entry/place/38729351?placePath=/home?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202511241635&locale=ko&svcName=map_pcv5&searchType=place&lng=127.0605764&lat=37.6559517&c=15.00,0,0,0,dh"
+                            href="https://map.naver.com/p/entry/place/38729351"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full inline-flex items-center justify-center gap-2 bg-[#03C75A] text-white px-6 py-4 rounded-xl font-bold hover:bg-[#02b351] transition-colors duration-300 shadow-lg"

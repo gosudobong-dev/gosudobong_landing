@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, FileText, RefreshCw, ArrowRight, ShieldCheck } from "lucide-react";
+import { FileText, RefreshCw, ArrowRight, ShieldCheck } from "lucide-react";
 import { landingData } from "@/data/landingData";
 
 const triggers = [

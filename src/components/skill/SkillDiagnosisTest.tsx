@@ -9,12 +9,12 @@ const SkillDiagnosisTest = () => {
     const diagnosisData = landingData.skill.diagnosis;
     const theme = landingData.skill.theme || "#3B82F6";
 
-    if (!diagnosisData) return null;
-
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [scores, setScores] = useState<number[]>([]);
     const [showResult, setShowResult] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
+
+    if (!diagnosisData) return null;
 
     const handleOptionSelect = (score: number) => {
         const newScores = [...scores, score];

@@ -6,7 +6,6 @@ import { landingData } from "@/data/landingData";
 
 const SkillProblem = () => {
     const data = landingData.skill.problem;
-    const theme = landingData.skill.theme;
 
     const iconMap = {
         monitor: Monitor,

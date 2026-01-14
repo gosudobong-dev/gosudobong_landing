@@ -10,71 +10,79 @@ interface SocialProofProps {
     theme?: string;
 }
 
-const SocialProof = ({ theme = "#FECE48" }: SocialProofProps) => {
-    // Fallback static reviews (used when API fails)
-    const staticReviews = [
+interface Review {
+    id: number;
+    image: string;
+    text: string;
+    name: string;
+    date?: string;
+}
+
+// Fallback static reviews (used when API fails)
+const STATIC_REVIEWS: Review[] = [
         {
             id: 0,
             image: "https://gosudriving.com/data/files/54cc00e6732898f04cf10407e5063c83.jpg",
             text: "정말 너무 친절하시고 세세하게 알려주십니다!어려웠던 부분도 강사님들 덕분에 다시 이해하고시험 합격할 수 있었습니다 ㅎㅎ가성비 대비해서 정말 강추드립니다시뮬로도 충분히 면허합격 가능합니다!",
             name: "이*준",
-            date: "2025-11-28"
+            date: ""
         },
         {
             id: 1,
             image: "https://gosudriving.com/data/files/3b70da72807195e67dd4f61e22b0c5d1.jpg",
             text: "전에 했던 경험이 있는 채로 왔었는데, 잘 상기시켜주셔서 일주일 조금 넘게 지나 합격까지 했습니다! 면허시험장과 너무 가까워서 좋고 모르는 점이나 헷갈리는 점도 잘 알려주셔서 편하게 합격할 수 있던것 같아요!",
             name: "김*하",
-            date: "2025-11-28"
+            date: ""
         },
         {
             id: 2,
             image: "https://gosudriving.com/data/files/99196b4682b37e1fbb5d91dd50b6eec1.jpg",
             text: "면허 땄어요. 기분이 너무 좋네요",
             name: "김*화",
-            date: "2025-11-07"
+            date: ""
         },
         {
             id: 3,
             image: "https://gosudriving.com/data/files/9bff5922d928a1d43c9e49f0130657e3.jpg",
             text: "친절한 강사님 덕분에 빠르게 면허 딸 수 있었습니다!! 정말 좋으니까 와보시는 거 추천드려요!!",
             name: "김*윤",
-            date: "2025-11-07"
+            date: ""
         },
         {
             id: 4,
             image: "https://gosudriving.com/data/files/ac2a02a5810d8428e0257c14c67f8ccd.jpg",
             text: "선생님의 좋은 지도 덕분에 면허 합격했습니다 !!! 면허 합격 이후에도 주차 알려주셔서 너무 좋은 것 같아요! 그동안 감사했습니다~~~",
             name: "박*현",
-            date: "2025-11-07"
+            date: ""
         },
         {
             id: 5,
             image: "https://gosudriving.com/data/files/a3fb1491e02bc3b049fcaed792ad14ac.webp",
             text: "운전이 무서우면 고수운전학원 2주면 합격 50대후반 합격햇네요 화이팅감사합니다",
             name: "서*원",
-            date: "2025-11-07"
+            date: ""
         },
         {
             id: 6,
             image: "https://gosudriving.com/data/files/89dde8c23f9dfba95b2de557e7840afd.jpg",
             text: "시뮬레이션이 실제로 차로 운전하는거랑 비슷해요! 브레이크 감도 바꿀수 있는점도 너무 좋고 코스 그대로 나와있어서 익히기 좋아요! 선생님들도 다 친절하시고 설명 잘하십니다 추천해요!!",
             name: "김*아",
-            date: "2025-11-01"
+            date: ""
         },
         {
             id: 7,
             image: "https://gosudriving.com/data/files/6a7f68077417836a0690f3c82c8b0dd7.jpg",
             text: "시뮬레이션으로도 충분히 실제 차랑 비슷해서 연습하기 좋았습니다. 덕분에 기능 도로주행 둘 다 한 번에 합격했어요! 감사합니다☺️❤️",
             name: "이*혜",
-            date: "2025-11-01"
+            date: ""
         }
     ];
 
-    const [reviews, setReviews] = useState(staticReviews);
+const SocialProof = ({ theme = "#FECE48" }: SocialProofProps) => {
+    const [reviews, setReviews] = useState<Review[]>(STATIC_REVIEWS);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [selectedReview, setSelectedReview] = useState<any>(null);
+    const [selectedReview, setSelectedReview] = useState<Review | null>(null);
 
     useEffect(() => {
         const fetchReviews = async () => {
@@ -89,13 +97,13 @@ const SocialProof = ({ theme = "#FECE48" }: SocialProofProps) => {
                 } else {
                     // Use fallback data if API returns no reviews
                     console.warn('No reviews from API, using fallback data');
-                    setReviews(staticReviews);
+                    setReviews(STATIC_REVIEWS);
                 }
             } catch (err) {
                 console.error('Failed to fetch reviews:', err);
                 setError('리뷰를 불러오는데 실패했습니다. 기본 리뷰를 표시합니다.');
                 // Keep using static reviews on error
-                setReviews(staticReviews);
+                setReviews(STATIC_REVIEWS);
             } finally {
                 setIsLoading(false);
             }
@@ -113,7 +121,7 @@ const SocialProof = ({ theme = "#FECE48" }: SocialProofProps) => {
         if (!scrollContainer || isLoading) return;
 
         let animationFrameId: number;
-        let scrollSpeed = 1; // Pixels per frame
+        const scrollSpeed = 1; // Pixels per frame
 
         const scroll = () => {
             if (!isPaused && scrollContainer) {
@@ -246,7 +254,7 @@ const SocialProof = ({ theme = "#FECE48" }: SocialProofProps) => {
 
             <div className="text-center">
                 <a
-                    href="https://pcmap.place.naver.com/place/38729351/review?additionalHeight=76&entry=plt&fromPanelNum=1&locale=ko&svcName=map_pcv5&timestamp=202511240203"
+                    href="https://pcmap.place.naver.com/place/38729351/review"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-transparent border-2 px-8 py-3 rounded-full font-bold transition-all duration-300"

@@ -31,12 +31,12 @@ const hakgyoansim = localFont({
 
 export const metadata: Metadata = {
   title: "고수의 운전면허 도봉점 - 합격 무제한 보장 | 노원 운전면허",
-  description: "노원/도봉 운전면허 합격률 1위! 실내 운전연습장에서 합리적인 비용으로 면허 취득하세요. 합격할 때까지 추가 비용 없는 무제한 보장반 운영. 100% 예약제, 1:1 맞춤 지도.",
+  description: "노원/도봉 운전면허 합격률 1위! 실내 운전연습장에서 합리적인 비용으로 운전면허 취득하세요. 합격할 때까지 추가 비용 없는 무제한 보장반 운영. 100% 예약제, 1:1 맞춤 지도.",
   keywords: ["운전면허", "운전연습", "장롱면허", "운전연수", "도봉운전면허시험장", "노원운전면허학원", "실내운전연습장", "고수의운전면허"],
   metadataBase: new URL("https://dobong.gosudriving.com"),
   openGraph: {
     title: "고수의 운전면허 도봉점 - 합격 무제한 보장",
-    description: "합격할 때까지 추가 비용 0원! 쾌적한 실내에서 시뮬레이터로 안전하고 확실하게 면허 취득하세요.",
+    description: "합격할 때까지 추가 비용 0원! 쾌적한 실내에서 시뮬레이터로 안전하고 확실하게 운전면허 취득하세요.",
     url: "https://dobong.gosudriving.com",
     siteName: "고수의 운전면허 도봉점",
     images: [

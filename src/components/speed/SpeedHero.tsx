@@ -57,7 +57,7 @@ const SpeedHero = ({ locationName, keyword }: SpeedHeroProps) => {
 
                         <p className="text-gray-300 text-xl md:text-3xl mb-12 leading-tight max-w-2xl font-medium">
                             운전면허 취득이 급하신가요? <br />
-                            <span className="text-white font-bold border-b-4 border-red-600">가장 빠른 합격</span>은 '가장 많이 연습하는 것'뿐입니다.
+                             <span className="text-white font-bold border-b-4 border-red-600">가장 빠른 합격</span>은 &apos;가장 많이 연습하는 것&apos;뿐입니다.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-6">
@@ -66,7 +66,7 @@ const SpeedHero = ({ locationName, keyword }: SpeedHeroProps) => {
                                 className="group relative px-10 py-5 bg-red-600 text-white font-bold text-xl rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(220,38,38,0.5)] hover:shadow-[0_0_50px_rgba(220,38,38,0.7)] transition-all duration-300 hover:scale-105 active:scale-95"
                             >
                                 <span className="relative z-10 flex items-center gap-3">
-                                    면허 2주안에 따러가기 <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                                    운전면허 2주안에 따러가기 <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                                 </span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-red-700 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </a>

@@ -84,7 +84,7 @@ const SpeedCTA = () => {
                     </div>
 
                     <a
-                        href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&startDate=2026-01-09&theme=place"
+                        href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&theme=place"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold text-xl hover:scale-105 hover:bg-gray-900 transition-all duration-300 shadow-2xl"
