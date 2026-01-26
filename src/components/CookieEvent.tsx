@@ -101,7 +101,7 @@ const CookieEvent = ({ theme = "#FECE48" }: { theme?: string }) => {
                         </ul>
 
                         <a
-                            href="https://booking.naver.com/booking/6/bizes/697059/items/4416581?area=ple&lang=ko&theme=place"
+                            href="https://booking.naver.com/booking/6/bizes/697059/items/7313402?area=ple&lang=ko&startDate=2026-01-26&theme=place"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full block text-center bg-[#5D4037] hover:bg-[#4E342E] text-white font-bold py-4 rounded-xl transition-colors"
