@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
 import { Phone, Menu, X } from "lucide-react";
 
@@ -37,14 +38,16 @@ const Header = () => {
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     {/* ... Logo ... */}
                     <div className="flex items-center">
-                        <Image
-                            src="/logo-white.webp"
-                            alt={siteConfig.common.companyName}
-                            width={160}
-                            height={48}
-                            className="h-10 md:h-12 w-auto object-contain"
-                            priority
-                        />
+                        <Link href="/" aria-label="메인 페이지로 이동">
+                            <Image
+                                src="/logo-white.webp"
+                                alt={siteConfig.common.companyName}
+                                width={160}
+                                height={48}
+                                className="h-10 md:h-12 w-auto object-contain"
+                                priority
+                            />
+                        </Link>
                     </div>
 
                     {/* Desktop Nav */}

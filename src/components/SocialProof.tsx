@@ -233,7 +233,7 @@ const SocialProof = ({ theme = "#FECE48" }: SocialProofProps) => {
 
                                 <Image
                                     src={review.image}
-                                    alt={review.text}
+                                    alt={review.name ? `${review.name} 후기` : "수강생 후기"}
                                     fill
                                     sizes="(max-width: 768px) 256px, 320px"
                                     className="object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300"

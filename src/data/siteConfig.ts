@@ -434,7 +434,8 @@ export const siteConfig: SiteConfig = {
                 badge: "",
                 title: `<span class="block text-xl md:text-3xl font-bold text-white/90 mb-6 font-sans tracking-tight">노원·도봉 1위 시뮬레이션 면허</span><span class="block text-4xl md:text-7xl font-black text-brand-yellow leading-tight font-retrosans tracking-tighter drop-shadow-lg">반값이면 충분합니다</span>`,
                 subtitle: "100만원짜리 면허, 반값으로 끝내세요.<br/>불합격해도 추가비용 0원.",
-                ctaText: "추가비용 없이 시작하기"
+                ctaText: "추가비용 없이 시작하기",
+                ctaLink: "https://pcmap.place.naver.com/place/38729351/ticket"
             },
             problem: {
                 title: "왜 고수의 운전면허 도봉점인가요?",

@@ -42,7 +42,7 @@ const ReviewModal = ({ review, onClose, theme = "#FECE48" }: ReviewModalProps) =
                     <div className="w-full md:w-1/2 h-64 md:h-auto relative">
                         <Image
                             src={review.image}
-                            alt={review.name}
+                            alt={review.name ? `${review.name} 후기` : "수강생 후기"}
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-cover"

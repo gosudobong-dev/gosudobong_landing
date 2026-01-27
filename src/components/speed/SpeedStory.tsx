@@ -42,8 +42,8 @@ const SpeedStory = () => {
 
                         <div className="relative aspect-square mb-8 rounded-2xl overflow-hidden border border-gray-200 bg-white">
                             <Image
-                                src="/hwang_before.webp"
-                                alt="황*정 수강생의 좌절"
+                                src="/badcasestudy.webp"
+                                alt="일반 학원의 문제점"
                                 fill
                                 className="object-contain p-4"
                             />
@@ -93,10 +93,10 @@ const SpeedStory = () => {
 
                             <div className="relative aspect-square mb-8 rounded-2xl overflow-hidden bg-white border border-white/20 flex items-center justify-center group">
                                 <Image
-                                    src="/hwang_after.webp"
-                                    alt="황*정 수강생의 합격"
+                                    src="/goodcasestudy.webp"
+                                    alt="고수의 운전면허 성공 사례"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain p-4"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-red-700/50 to-transparent"></div>
                                 <div className="absolute bottom-4 left-4 right-4 z-20">
@@ -107,7 +107,7 @@ const SpeedStory = () => {
 
                             <div className="space-y-4 flex-1">
                                 <p className="text-red-50 leading-relaxed italic">
-                                     &quot;고수에서는 떨어질 걱정 없이 제가 원하는 만큼 충분히 연습할 수 있었어요. 특히 주차 공식이 너무 명확해서 시험장에서 당황하지 않았죠. 딱 2주일 만에 면허증을 손에 쥐었을 때의 쾌감은 잊을 수 없어요!&quot;
+                                    &quot;고수에서는 떨어질 걱정 없이 제가 원하는 만큼 충분히 연습할 수 있었어요. 특히 주차 공식이 너무 명확해서 시험장에서 당황하지 않았죠. 딱 2주일 만에 면허증을 손에 쥐었을 때의 쾌감은 잊을 수 없어요!&quot;
                                 </p>
                                 <div className="pt-4 border-t border-white/20">
                                     <div className="flex justify-between text-sm mb-2">

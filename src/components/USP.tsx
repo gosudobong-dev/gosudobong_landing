@@ -230,7 +230,8 @@ const USP = ({ data, theme }: USPProps) => {
                                 loop
                                 muted
                                 playsInline
-                                preload="none"
+                                preload="metadata"
+                                autoPlay
                                 className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="relative z-20 h-full flex flex-col justify-end p-8 md:p-10">
@@ -283,21 +284,21 @@ const USP = ({ data, theme }: USPProps) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                             viewport={{ once: true }}
-                            className="bg-gray-900 border border-gray-800 rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-[320px] relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 hover:border-gray-700"
+                            className="bg-brand-yellow border border-yellow-300/80 rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-[320px] relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
                         >
                             <div className="relative z-10">
-                                <div className="bg-gray-800 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gray-700 transition-colors">
-                                    <Users className="w-8 h-8 text-brand-yellow" />
+                                <div className="bg-brand-black/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                                    <Users className="w-8 h-8 text-brand-black" />
                                 </div>
-                                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 break-keep font-hakgyoansim">
+                                <h3 className="text-2xl md:text-3xl font-bold text-brand-black mb-4 break-keep font-hakgyoansim">
                                     1:1 밀착<br />맞춤 코칭
                                 </h3>
-                                <p className="text-gray-400 text-lg leading-relaxed break-keep">
+                                <p className="text-brand-black/80 text-lg leading-relaxed break-keep">
                                     나의 운전 실력과 습관을 분석하여<br />
                                     부족한 부분을 집중적으로 케어해드립니다.
                                 </p>
                             </div>
-                            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-yellow/5 rounded-full blur-3xl group-hover:bg-brand-yellow/10 transition-colors duration-500" />
+                            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-black/10 rounded-full blur-3xl group-hover:bg-brand-black/15 transition-colors duration-500" />
                         </m.div>
 
                         {/* 5. 실수해도 괜찮아 (Video Card - Accident) */}

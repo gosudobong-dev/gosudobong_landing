@@ -16,7 +16,7 @@ import SpeedCTA from "@/components/speed/SpeedCTA";
 // Shared Components
 import SocialProof from "@/components/SocialProof";
 import LocationSection from "@/components/LocationSection";
-import NewYearEvent from "@/components/NewYearEvent";
+import CookieEvent from "@/components/CookieEvent";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -60,7 +60,7 @@ export default function SpeedPage() {
                 {/* Shared Sections */}
                 <SocialProof theme={theme} />
                 <LocationSection theme={theme} />
-                <NewYearEvent theme={theme} />
+                <CookieEvent theme={theme} />
                 <FAQ theme={theme} />
                 <Footer theme={theme} />
                 <FloatingCTA theme={theme} />
