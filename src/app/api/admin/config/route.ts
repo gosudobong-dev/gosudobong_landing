@@ -12,7 +12,8 @@ export async function GET() {
     try {
         const config = await readConfig();
         return NextResponse.json(config);
-    } catch {
+    } catch (err) {
+        console.error('[admin/config GET]', err);
         return NextResponse.json({ error: '설정을 불러오는데 실패했습니다.' }, { status: 500 });
     }
 }
@@ -28,7 +29,8 @@ export async function PUT(request: Request) {
         await writeConfig(config);
         revalidateTag('siteConfig', 'default');
         return NextResponse.json({ success: true });
-    } catch {
+    } catch (err) {
+        console.error('[admin/config PUT]', err);
         return NextResponse.json({ error: '설정 저장에 실패했습니다.' }, { status: 500 });
     }
 }

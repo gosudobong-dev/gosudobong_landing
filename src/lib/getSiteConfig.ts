@@ -43,8 +43,8 @@ export const getSiteConfig = unstable_cache(
   async (): Promise<SiteConfig> => {
     try {
       return await fetchConfigFromTurso();
-    } catch {
-      // Fallback to static config if Turso is unavailable
+    } catch (err) {
+      console.error('[getSiteConfig] Turso failed, using static fallback:', err);
       return applyCopyrightYear(applyUspGetters(staticConfig));
     }
   },

@@ -26,7 +26,8 @@ export async function GET(
             return NextResponse.json({ error: '섹션을 찾을 수 없습니다.' }, { status: 404 });
         }
         return NextResponse.json(data);
-    } catch {
+    } catch (err) {
+        console.error('[admin/config/section GET]', section, err);
         return NextResponse.json({ error: '섹션을 불러오는데 실패했습니다.' }, { status: 500 });
     }
 }
@@ -51,7 +52,8 @@ export async function PUT(
         await writeSection(section, data);
         revalidateTag('siteConfig', 'default');
         return NextResponse.json({ success: true });
-    } catch {
+    } catch (err) {
+        console.error('[admin/config/section PUT]', section, err);
         return NextResponse.json({ error: '섹션 저장에 실패했습니다.' }, { status: 500 });
     }
 }
